@@ -1,0 +1,13 @@
+pipeline{
+agent any
+stages {
+  stage('spring boot') {
+    steps {
+      withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'null', mavenSettingsConfig: 'null') {
+   sh'spring boot'
+}
+    }
+  }
+
+}
+}
